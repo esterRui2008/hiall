@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>    
     <head>
         <meta charset="utf-8">
@@ -34,33 +34,6 @@
       <script src="js/jquery.touchwipe.1.1.1.js"></script>
       <script src="js/iscroll.js"></script>
       <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-      <script>
-        window.onload = function(){
-          var carousel,iH,windowH;
-          windowH = $(window).height();
-          //首页动画
-          $('.bg1').height(windowH).addClass('bg1_h');
-          $('.bg1 > img').eq(1).addClass('bounceInRight');
-          setTimeout(function(){
-            $('.bg1 > img').eq(1).removeClass('bounceInRight').addClass('kiteShake');
-          },1500);
-          $('.bg1 > img').eq(4).addClass('carMove');
-          setTimeout(function(){
-            $('.bg1 > img').eq(4).removeClass('carMove').addClass('carShake');
-          },3000);
-          iH = $('.memberList p').height()+8;
-          //$('.memberList').height(iH*3);
-          //滑动页面
-          $('.bg1').touchwipe({
-            wipeDown : function(event) {
-              $('.bg1').addClass('bg_up');
-              $('.wx_dj_wrap').css('overflow','auto');
-              setTimeout(function(){
-                window.location.href = 'list.html';
-              },1500)
-            }
-          });
-        }
-      </script>
+      
     </body>
 </html>
